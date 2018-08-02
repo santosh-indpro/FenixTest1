@@ -14,8 +14,6 @@
   },
   "scripts": {
     "start": "node app.js",
-    /*"start-disabled": "react-scripts start",
-    "build-disabled": "react-scripts build",*/
     "test": "mocha --recursive tests --exit"
   },
   "dependencies": {
