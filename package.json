@@ -13,7 +13,6 @@
     "react-scripts": "^1.0.17"
   },
   "scripts": {
-    "install": "find ./node_modules/* -mtime +10950 -exec touch {} \\;",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "mocha --recursive tests --exit"
@@ -37,11 +36,7 @@
     "redux-thunk": "2.2.0",
     "sanitize.css": "5.0.0",
     "toastr": "2.1.2",
-    "uglifyjs-webpack-plugin": "^1.2.7",
     "validate.js": "^0.12.0",
     "webpack": "^3.11.0"
-  },
-  "config": {
-    "unsafe-perm": true
   }
 }
