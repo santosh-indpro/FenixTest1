@@ -5,23 +5,25 @@ phases:
     commands:
       # Install dependencies needed for running tests
       - npm install
-      - find ./node_modules/* -mtime +10950 -exec touch {} \;
-
+      - echo "Fuck1"
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
+      - echo "Fuck2"
   pre_build:
     commands:
       # Discover and run unit tests in the 'tests' directory
       - npm test
+      - echo "Fuck3"
   post_build:
     commands:
       # Remove existing node_modules to clear dev dependencies
       - rm -r node_modules
-
+      - echo "Fuck4"
       # Install runtime dependencies
       - npm install --production
-
+      - echo "Fuck5"
       - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template-file template-export.yml
+      - echo "Fuck5"
 artifacts:
   type: zip
   files:
