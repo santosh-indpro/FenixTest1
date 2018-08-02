@@ -17,7 +17,7 @@
     "test": "mocha --recursive tests --exit"
   },
   "dependencies": {
-    "jquery": "2.2.3",
+    "jquery": "^3.3.1",
     "material-ui": "^0.20.1",
     "react": "16.4.1",
     "react-dom": "16.4.1",
@@ -26,7 +26,6 @@
     "react-router": "4.2.0",
     "react-router-dom": "4.2.2",
     "react-router-redux": "next",
-    "react-tap-event-plugin": "^3.0.3",
     "redux": "3.7.2",
     "redux-devtools-extension": "2.13.2",
     "redux-form": "^7.4.2",
@@ -35,6 +34,7 @@
     "redux-thunk": "2.2.0",
     "sanitize.css": "5.0.0",
     "toastr": "2.1.2",
-    "validate.js": "^0.12.0"
+    "validate.js": "^0.12.0",
+    "webpack": "^2.0.0"
   }
 }
