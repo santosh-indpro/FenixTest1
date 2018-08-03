@@ -5,7 +5,7 @@ var port = process.env.PORT || 3000,
 var app = http.createServer(function (req, res) {
 if (req.url.indexOf('/img') != -1) {
     var filePath = req.url.split('/img')[1];
-    fs.readFile(__dirname + '/build/img' + filePath, function (err, data) {
+    fs.readFile(__dirname + '/public/img' + filePath, function (err, data) {
       if (err) {
         res.writeHead(404, {'Content-Type': 'text/plain'});
         res.write('Error 404: Resource not found.');
@@ -18,7 +18,7 @@ if (req.url.indexOf('/img') != -1) {
     });
   } else if (req.url.indexOf('/js') != -1) {
     var filePath = req.url.split('/js')[1];
-    fs.readFile(__dirname + '/build/static/js' + filePath, function (err, data) {
+    fs.readFile(__dirname + '/public/static/js' + filePath, function (err, data) {
       if (err) {
         res.writeHead(404, {'Content-Type': 'text/plain'});
         res.write('Error 404: Resource not found.');
@@ -31,7 +31,7 @@ if (req.url.indexOf('/img') != -1) {
     });
   } else if(req.url.indexOf('/css') != -1) {
     var filePath = req.url.split('/css')[1];
-    fs.readFile(__dirname + '/build/static/css' + filePath, function (err, data) {
+    fs.readFile(__dirname + '/public/static/css' + filePath, function (err, data) {
         if (err) {
             res.writeHead(404, {'Content-Type': 'text/plain'});
             res.write('Error 404: Resource not found.');
@@ -44,7 +44,7 @@ if (req.url.indexOf('/img') != -1) {
     });
   } else if(req.url.indexOf('/eot') != -1) {
     var filePath = req.url.split('/eot')[1];
-    fs.readFile(__dirname + '/build/static/media' + filePath, function (err, data) {
+    fs.readFile(__dirname + '/public/static/media' + filePath, function (err, data) {
         if (err) {
             res.writeHead(404, {'Content-Type': 'text/plain'});
             res.write('Error 404: Resource not found.');
@@ -57,7 +57,7 @@ if (req.url.indexOf('/img') != -1) {
     });
   } else if(req.url.indexOf('/ttf') != -1) {
     var filePath = req.url.split('/ttf')[1];
-    fs.readFile(__dirname + '/build/static/media' + filePath, function (err, data) {
+    fs.readFile(__dirname + '/public/static/media' + filePath, function (err, data) {
         if (err) {
             res.writeHead(404, {'Content-Type': 'text/plain'});
             res.write('Error 404: Resource not found.');
@@ -70,7 +70,7 @@ if (req.url.indexOf('/img') != -1) {
     });
   } else if(req.url.indexOf('/woff') != -1) {
     var filePath = req.url.split('/woff')[1];
-    fs.readFile(__dirname + '/build/static/media' + filePath, function (err, data) {
+    fs.readFile(__dirname + '/public/static/media' + filePath, function (err, data) {
         if (err) {
             res.writeHead(404, {'Content-Type': 'text/plain'});
             res.write('Error 404: Resource not found.');
@@ -83,7 +83,7 @@ if (req.url.indexOf('/img') != -1) {
     });
   } else if(req.url.indexOf('/svg') != -1) {
     var filePath = req.url.split('/svg')[1];
-    fs.readFile(__dirname + '/build/static/media' + filePath, function (err, data) {
+    fs.readFile(__dirname + '/public/static/media' + filePath, function (err, data) {
         if (err) {
             res.writeHead(404, {'Content-Type': 'text/plain'});
             res.write('Error 404: Resource not found.');
@@ -96,7 +96,7 @@ if (req.url.indexOf('/img') != -1) {
     });
   }
   else {
-    fs.readFile(__dirname + '/build/index.html', function (err, data) {
+    fs.readFile(__dirname + '/public/index.html', function (err, data) {
       if (err) {
         res.writeHead(404, {'Content-Type': 'text/plain'});
         res.write('Error 404: Resource not found.');
