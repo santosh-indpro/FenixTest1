@@ -4,7 +4,6 @@ phases:
   install:
     commands:
       # Install dependencies needed for running tests
-      - npm install
 
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
@@ -18,7 +17,7 @@ phases:
       - rm -r node_modules
 
       # Install runtime dependencies
-      - npm install --production
+      - npm install
       - npm run timestampFix
       - npm run build
       - aws cloudformation package --template template.yml --s3-bucket $S3_BUCKET --output-template-file template-export.yml
