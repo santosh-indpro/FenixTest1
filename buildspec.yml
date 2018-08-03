@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       # Install dependencies needed for running tests
+      #- npm install
 
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
@@ -14,7 +15,7 @@ phases:
   post_build:
     commands:
       # Remove existing node_modules to clear dev dependencies
-      - rm -r node_modules
+      #- rm -r node_modules
 
       # Install runtime dependencies
       - npm install
