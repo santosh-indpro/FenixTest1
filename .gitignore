@@ -7,3 +7,5 @@ nbproject
 .node_history
 /node_modules/
 /.tmp/
+/build/
+build

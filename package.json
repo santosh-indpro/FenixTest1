@@ -10,7 +10,9 @@
     "react-scripts": "^1.0.17"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node app.js",
+    "build": "react-scripts build",
+    "createPublic": "cp -a build/. public",
     "timestampFix": "find ./node_modules/* -mtime +10950 -exec touch {} \\;"
   },
   "dependencies": {
