@@ -10,9 +10,11 @@
   },
   "scripts": {
     "start": "node app.js",
-    "dev": "npm-run-all -s build start",
-    "build": "react-scripts build",
-    "timestampFix": "find ./node_modules/* -mtime +10950 -exec touch {} \\;"
+    "dev": "npm-run-all -p devServerReact buildProd",
+    "devServerReact":"react-scripts start",
+    "build": "npm-run-all -p clearBuild buildProd",
+    "buildProd": "react-scripts build",
+    "clearBuild": "rm -r build"
   },
   "dependencies": {
     "jquery": "^3.3.1",
@@ -22,7 +24,8 @@
     "react-dom": "16.2.1",
     "react-loading": "^2.0.2",
     "react-redux": "5.0.6",
-    "react-router-dom": "^4.4.0-alpha.1",
+    "react-router": "4.2.0",
+    "react-router-dom": "4.2.2",
     "react-router-redux": "next",
     "react-scripts": "^1.0.17",
     "react-tap-event-plugin": "^3.0.3",

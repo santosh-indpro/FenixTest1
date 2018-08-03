@@ -5,7 +5,6 @@ import {reduxForm, Field} from "redux-form";
 import * as uiAction from "../../actions/uiAction";
 import FormFieldForLogin from "../common/formFiledForLogin";
 import FormValidator from "../common/formValidator";
-//import { push } from 'react-router-redux';
 
 
 class LoginPage extends React.Component {
@@ -54,7 +53,7 @@ class LoginPage extends React.Component {
         <div className="container">
             <form >
                 <div className="row backDivColor">
-                    <h2 style={{textAlign:'center'}}>Login with Social Media or Manually</h2>
+                    <h2 style={{textAlign:'center'}}>Login with Social Media or Manually Test</h2>
                     <div className="vl">
                         <span className="vl-innertext">or</span>
                     </div>
@@ -72,20 +71,13 @@ class LoginPage extends React.Component {
                     </div>
 
                     <div className="col">
-                        <div className="hide-md-lg">
-                            <p>Or sign in manually:</p>
-                        </div>
                         <form onSubmit={handleSubmit(this.onLogin)}>
                             <Field name="email" placeholder="Username" className="loginBox" component={FormFieldForLogin} type="text"/>
-
-                            <Field name="password" placeholder="Password" className="loginBox"
-                                   component={FormFieldForLogin} type="password"/>
+                            <Field name="password" placeholder="Password" className="loginBox" component={FormFieldForLogin} type="password"/>
                             <button ref={handleEnterKeyPress} className="btn buttonBackground loginBox " type="submit"
                                     disabled={submitting}><span className="glyphicon glyphicon-log-in"></span>  Log In
                             </button>
-
                         </form>
-
                     </div>
 
                 </div>
