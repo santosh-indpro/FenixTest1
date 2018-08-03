@@ -53,7 +53,7 @@ class LoginPage extends React.Component {
         <div className="container">
             <form >
                 <div className="row backDivColor">
-                    <h2 style={{textAlign:'center'}}>Login with Social Media or Manually Test</h2>
+                    <h2 style={{textAlign:'center'}}>Login with Social Media or Manually Test XX</h2>
                     <div className="vl">
                         <span className="vl-innertext">or</span>
                     </div>
